@@ -1,0 +1,84 @@
+﻿<Window x:Class="De.Cefoot.BattleShips.Client.ClientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:De.Cefoot.BattleShips.Client"
+        mc:Ignorable="d"
+        Title="Shiffeversenken" Height="350" Width="525" Loaded="Window_Loaded">
+    <Grid Name="grdBack">
+        <Grid.RowDefinitions>
+            <RowDefinition Name="AdminRow" Height="0" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="auto" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Label Content="Administrator" VerticalAlignment="Center" FontWeight="Bold"/>
+            <Border Grid.Column="1" BorderBrush="Black" BorderThickness="2" Margin="5" Padding="3">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal">
+                        <Label Content="Spielfeld:"/>
+                        <TextBox PreviewTextInput="TB_PreviewText" Name="tbWidth" Width="30" GotFocus="tb_GotFocus" />
+                        <Label Content="X"/>
+                        <TextBox PreviewTextInput="TB_PreviewText" Name="tbHeight" Width="30" GotFocus="tb_GotFocus" />
+                        <Label Content="Felder"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Orientation="Horizontal">
+                        <TextBox PreviewTextInput="TB_PreviewText" Name="tbTipCnt" Width="30" GotFocus="tb_GotFocus" />
+                        <Label Content="Tipps pro Stunde    "/>
+                        <TextBox PreviewTextInput="TB_PreviewText" Name="tbShipCnt" Width="30" GotFocus="tb_GotFocus" />
+                        <Label Content="Schiffe"/>
+                    </StackPanel>
+                    <Button Grid.Row="1" Grid.Column="1" Content="neue Runde starten" Click="Button_Click"/>
+                </Grid>
+            </Border>
+        </Grid>
+        <Grid Margin="10" ShowGridLines="True" Name="grdField" Grid.Row="1" Grid.Column="0" />
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition  Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="Server"/>
+            <Label Grid.Row="0" Grid.Column="1" Name="lblServer" />
+            <Label Grid.Row="1" Grid.Column="0" Content="verbrauchte Tipps"/>
+            <Label Grid.Row="1" Grid.Column="1" Name="lblTipsCnt" />
+            <Label Grid.Row="2" Grid.Column="0" Content="Tipps noch"/>
+            <Label Grid.Row="2" Grid.Column="1" Name="lblTipsRemain" />
+            <Label Grid.Row="3" Grid.Column="0" Content="Zeit bis neue Tipps"/>
+            <Label Grid.Row="3" Grid.Column="1" Name="lblTime" />
+            <Label Grid.Row="4" Grid.Column="0" Content="versteckte Schiffe"/>
+            <Label Grid.Row="4" Grid.Column="1" Name="lblShips" />
+            <Label Grid.Row="5" Grid.ColumnSpan="2" Content="Bestenliste Aktuell" FontWeight="Bold"  />
+            <ListBox Name="lbCurrent" Grid.Row="6" Grid.ColumnSpan="2"></ListBox>
+            <Label Grid.Row="7" Grid.ColumnSpan="2" Content="Bestenliste Woche" FontWeight="Bold"  />
+            <ListBox Name="lbWeek" Grid.Row="8" Grid.ColumnSpan="2"></ListBox>
+        </Grid>
+    </Grid>
+</Window>
