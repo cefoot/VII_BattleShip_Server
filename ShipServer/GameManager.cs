@@ -123,6 +123,7 @@ namespace De.Cefoot.BattleShips.Server
                 playInfo.GameFinished = false;
                 playInfo.LastTipReset = DateTime.Now;
                 playInfo.TipsSinceLastReset = 0;
+                playInfo.Tips.Clear();
                 var plStream = ConnectedPlayer.First(e => e.Value == pl).Key;
                 RegisterPlayer(pl.Name, plStream, ConnectedSockets[plStream]);
             }
