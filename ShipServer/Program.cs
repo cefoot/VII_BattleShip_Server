@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
-using De.Cefoot.BattleShips.Data;
+using DE.Cefoot.BattleShips.Data;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace De.Cefoot.BattleShips.Server
+namespace DE.Cefoot.BattleShips.Server
 {
     class Program
     {

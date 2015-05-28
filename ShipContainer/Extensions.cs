@@ -7,7 +7,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace De.Cefoot.BattleShips.Data
+namespace DE.Cefoot.BattleShips.Data
 {
     public static class Extensions
     {

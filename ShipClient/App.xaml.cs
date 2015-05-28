@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace De.Cefoot.BattleShips.Client
+namespace DE.Cefoot.BattleShips.Client
 {
     /// <summary>
     /// Interaktionslogik für "App.xaml"

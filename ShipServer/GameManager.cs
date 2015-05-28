@@ -5,12 +5,12 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using De.Cefoot.BattleShips.Data;
+using DE.Cefoot.BattleShips.Data;
 using System.IO;
 using System.Threading;
 using System.Diagnostics;
 
-namespace De.Cefoot.BattleShips.Server
+namespace DE.Cefoot.BattleShips.Server
 {
     public class GameManager
     {
@@ -224,7 +224,7 @@ namespace De.Cefoot.BattleShips.Server
                     }
                     current.Key.SendData(info);
                 }
-                catch (IOException e)
+                catch (IOException)
                 {//Lost Connection?
                     CheckConnection(current.Key);
                 }

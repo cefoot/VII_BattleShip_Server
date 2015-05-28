@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace De.Cefoot.BattleShips.Data
+namespace DE.Cefoot.BattleShips.Data
 {
     [Serializable]
     public class Tip : IGameData

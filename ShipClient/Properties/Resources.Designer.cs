@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace De.Cefoot.BattleShips.Client.Properties {
+namespace DE.Cefoot.BattleShips.Client.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace De.Cefoot.BattleShips.Client.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("De.Cefoot.BattleShips.Client.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DE.Cefoot.BattleShips.Client.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
