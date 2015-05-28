@@ -21,67 +21,6 @@ namespace DE.Cefoot.BattleShips.Server
         private static bool _running = false;
         private static bool _newPlayerFinished = false;
 
-        public static class RunningGame
-        {
-            public class PlayerInfo
-            {
-                public DateTime LastTipReset { get; set; }
-                public List<Tip> Tips { get; } = new List<Tip>();
-                public int TipsSinceLastReset { get; set; } = 0;
-                private bool _finished = false;
-                public event EventHandler GameFinishedEvent;
-                public bool GameFinished
-                {
-                    get
-                    {
-                        return _finished;
-                    }
-                    set
-                    {
-
-                        if (value && GameFinishedEvent != null)
-                        {
-                            GameFinishedEvent(this, new EventArgs());
-                        }
-                        _finished = value;
-                    }
-                }
-            }
-            private static Random _rand = new Random();
-            public static List<Player> LeaderBoard { get; } = new List<Player>();
-            private static Dictionary<Player, PlayerInfo> PlayerInfos { get; } = new Dictionary<Player, PlayerInfo>();
-            public static Field Field
-            { get; }
-            = new Field
-            {
-                TipNewTime = /*Production TimeSpan.FromHours(1),*//*Debug*/TimeSpan.FromMinutes(1),
-                FieldHeight = 10 + _rand.Next(10),
-                FieldWidth = 10 + _rand.Next(5),
-                TipCount = 10 + _rand.Next(50),//default = max 1 tip / min
-                ShipCount = _rand.Next(2, 20)
-            };
-            public static bool[,] Ships { get; set; } = new bool[Field.FieldWidth, Field.FieldHeight];
-            public static int ShipParts { get; internal set; } = 0;
-            public static PlayerInfo GetInfo(Player player)
-            {
-                if (!PlayerInfos.ContainsKey(player))
-                {
-                    PlayerInfos[player] = new PlayerInfo
-                    {
-                        LastTipReset = DateTime.Now
-                    };
-                    PlayerInfos[player].GameFinishedEvent += (sender, obj) => Player_GameFinishedEvent(player);
-                }
-                return PlayerInfos[player];
-            }
-        }
-
-        private static void Player_GameFinishedEvent(Player player)
-        {
-            player.TipCount = RunningGame.GetInfo(player).Tips.Count;
-            _newPlayerFinished = true;
-        }
-
         internal void Start()
         {
             LoadLeaderBoard();
@@ -89,6 +28,7 @@ namespace DE.Cefoot.BattleShips.Server
             PositionShips();
             ThreadPool.QueueUserWorkItem(ReceiveData);
             ThreadPool.QueueUserWorkItem(StatusInfo);
+            RunningGame.PlayerFinishedEvent += (send, args) => _newPlayerFinished = true;
         }
 
         private void LoadLeaderBoard()

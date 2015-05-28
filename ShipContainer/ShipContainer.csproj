@@ -7,7 +7,7 @@
     <ProjectGuid>{10DC794B-691A-4469-B695-22B5606217EE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>De.Cefoot.BattleShips.Data</RootNamespace>
+    <RootNamespace>DE.Cefoot.BattleShips.Data</RootNamespace>
     <AssemblyName>ShipContainer</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

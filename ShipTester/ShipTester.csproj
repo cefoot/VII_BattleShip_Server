@@ -7,7 +7,7 @@
     <ProjectGuid>{B00CFE5F-4828-4876-B162-B2B4CA0237AE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>De.Cefoot.BattleShips.Test</RootNamespace>
+    <RootNamespace>DE.Cefoot.BattleShips.Test</RootNamespace>
     <AssemblyName>ShipTester</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
