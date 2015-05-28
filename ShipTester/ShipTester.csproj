@@ -36,6 +36,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,11 +45,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Start.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RunningGameTest.cs" />
+    <Compile Include="ServerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShipClient\ShipClient.csproj">
+      <Project>{f3ac2675-9f47-45bb-b874-44e9a28c0c50}</Project>
+      <Name>ShipClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShipContainer\ShipContainer.csproj">
+      <Project>{10dc794b-691a-4469-b695-22b5606217ee}</Project>
+      <Name>ShipContainer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShipServer\ShipServer.csproj">
+      <Project>{6384b982-8480-4f6d-8710-62fd18ebd6ab}</Project>
+      <Name>ShipServer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
