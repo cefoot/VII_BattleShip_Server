@@ -2,7 +2,7 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DE.Cefoot.BattleShips.Server.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="ServerPort" Type="System.Int32" Scope="Application">
+    <Setting Name="ServerPort" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">10404</Value>
     </Setting>
   </Settings>

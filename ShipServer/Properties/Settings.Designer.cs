@@ -23,12 +23,15 @@ namespace DE.Cefoot.BattleShips.Server.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("10404")]
         public int ServerPort {
             get {
                 return ((int)(this["ServerPort"]));
+            }
+            set {
+                this["ServerPort"] = value;
             }
         }
     }

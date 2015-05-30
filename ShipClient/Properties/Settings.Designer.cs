@@ -23,21 +23,27 @@ namespace DE.Cefoot.BattleShips.Client.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("127.0.0.1")]
         public string ServerAddress {
             get {
                 return ((string)(this["ServerAddress"]));
             }
+            set {
+                this["ServerAddress"] = value;
+            }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("10404")]
         public int ServerPort {
             get {
                 return ((int)(this["ServerPort"]));
+            }
+            set {
+                this["ServerPort"] = value;
             }
         }
     }
