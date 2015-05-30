@@ -18,7 +18,7 @@ namespace DE.Cefoot.BattleShips.Server
         { get; }
         = new Field
         {
-            TipNewTime = /*Production TimeSpan.FromHours(1),*//*Debug*/TimeSpan.FromMinutes(1),
+            TipNewTime = /*Production*/ TimeSpan.FromHours(1),/*Debug TimeSpan.FromMinutes(1),*/
             FieldHeight = 10 + _rand.Next(10),
             FieldWidth = 10 + _rand.Next(5),
             TipCount = 10 + _rand.Next(50),//default = max 1 tip / min
